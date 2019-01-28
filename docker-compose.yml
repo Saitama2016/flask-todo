@@ -1,6 +1,6 @@
 version: '3.5'
 services:
-  web_dev_1:
+  web_dev:
     build: .
     ports:
       - "4000:4000"
@@ -9,7 +9,7 @@ services:
     environment:
       - ENV=development
       - PORT=4000
-      - DB=mongodb://mongodb:27017/todoDev
+      - DB=mongodb://localhost:27017/todoDev
 networks:
   default:
-    name: web_dev_1
+    name: web_dev
